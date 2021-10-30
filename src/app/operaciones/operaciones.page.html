@@ -1,0 +1,29 @@
+<!--menu-->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>LISTA DE CONTACTOS</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!--contenido-->
+  
+  <ion-list>
+    <ion-item *ngFor="let con of lista_contactos">
+      <ion-avatar>
+        <img src="../../assets/icon/cara_.png">
+      </ion-avatar>
+      <ion-label>
+        <h2 class="colorBlue">{{con.id}}</h2>
+        <h2>{{con.fullname}}</h2>
+        <h2>{{con.phone}}</h2>
+        <h2>{{con.email}}</h2>
+        <ion-button>Seleccionar</ion-button>
+        <ion-button color="danger">Eliminar</ion-button>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

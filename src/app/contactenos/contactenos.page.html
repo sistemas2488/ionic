@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>CONTACTENOS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="myform">
+    <p class="ion-text-center">
+      <img src="https://cdn.icon-icons.com/icons2/20/PNG/128/business_application_addmale_useradd_insert_add_user_client_2312.png" >
+    </p>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" formControlName="fullname" ></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Telefono</ion-label>
+        <ion-input type="number" formControlName="phone"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      
+
+      <p class="ion-text-center">
+      <ion-button (click)="alta(myform.value)"  >Agregar contacto</ion-button>
+      </p>
+        
+     
+    
+  </form>
+</ion-content>
